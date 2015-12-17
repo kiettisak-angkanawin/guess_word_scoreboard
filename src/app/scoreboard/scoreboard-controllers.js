@@ -26,16 +26,24 @@
         // Initialize used scope variables
 
         $scope.guessWord = 'Taxi Driver Base';
-        var words = ['a','b','c','d','e','g'];
+        $scope.words = [];
 
+        function getWords(){
+          var words = [];
+          $http.get('/scoreboard/words.json').success(function(data) {
+            console.log('data', data);
+            $scope.words =  data;
+          });
+        }
+        getWords();
+        console.log('words', $scope.words);
         $scope.team1Point = 0;
         $scope.team2Point = 0;
         $scope.point = 1;
 
         $scope.reset = function reset() {
           $scope.guessWord = 'Taxi Driver Base';
-          words = ['a','b','c','d','e','g'];
-
+          getWords();
           $scope.team1Point = 0;
           $scope.team2Point = 0;
           $scope.point = 1;
@@ -46,10 +54,10 @@
         $scope.randomGuessWord = function randomGuessWord() {
 
           //var randomIndex = _.random(0, words.length-1);
-          if(_.isEmpty(words)){
+          if(_.isEmpty($scope.words)){
             return MessageService['error']('Run out of Words in list');
           }
-          $scope.guessWord = words.splice(_.random(words.length - 1), 1)[0];
+          $scope.guessWord = $scope.words.splice(_.random($scope.words.length - 1), 1)[0];
         };
 
         $scope.addTeam1Point = function addTeam1Point() {
