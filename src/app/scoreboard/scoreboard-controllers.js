@@ -25,16 +25,17 @@
       ) {
         // Initialize used scope variables
 
-        $scope.guessWord = 'Taxi Driver Base';
-        var words = ['a','b','c','d','e','g'];
+        $scope.guessWord = 'Ready?';
+        var words = ['Central East Ville', 'Central West Gate', 'Emquartier', 'Fontpage', 'FunkyVilla','Kasikorn Bank','ป่าละเมาะ','เกาะฮาวาย'];
+
 
         $scope.team1Point = 0;
         $scope.team2Point = 0;
         $scope.point = 1;
 
         $scope.reset = function reset() {
-          $scope.guessWord = 'Taxi Driver Base';
-          words = ['a','b','c','d','e','g'];
+          $scope.guessWord = 'Ready?';
+          words = ['Central East Ville', 'Central West Gate', 'Emquartier', 'Fontpage', 'FunkyVilla','Kasikorn Bank','ป่าละเมาะ','เกาะฮาวาย'];
 
           $scope.team1Point = 0;
           $scope.team2Point = 0;

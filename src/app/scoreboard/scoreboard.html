@@ -3,23 +3,28 @@
             left: addTeam1Point,
             right: addTeam2Point}"
   >
+  <div class="row"></div>
   <div class="row">
     <div class="col-sm-4 text-center">
-      <div class="row">Team 1</div>
-      <div class="row">{{team1Point}}</div>
+      <div class="row"><h3>Team 1</h3></div>
+      <div class="row"><h4>{{team1Point}}</h4></div>
     </div>
-    <div class="col-sm-4 text-center" data-ng-click="reset()">Play day#2015</div>
+    <div class="col-sm-4 text-center" data-ng-click="reset()"><h2>Play day#2015</h2></div>
     <div class="col-sm-4 text-center">
-      <div class="row">Team 2</div>
-      <div class="row">{{team2Point}}</div>
+      <div class="row"><h3>Team 2</H3></div>
+      <div class="row"><h4>{{team2Point}}</h4></div>
     </div>
   </div>
   <div class="row">
     <div class="col-xs-12 text-center">
-      <div>{{guessWord}}</div>
+      <br><br>
+      <div class="text-center"><h1>{{guessWord}}</h1></div>
+      <br><br><br><br><br><br><br><br>
     </div>
   </div>
-  <div class="row pull-down">
+
+  <div class="row">
+    <br>
     <div class="col-sm-4 text-center">
       <button class="btn btn-success"
               data-ng-click="addTeam1Point()"
@@ -47,4 +52,5 @@
       </button>
     </div>
   </div>
+  <br>
 </div>
