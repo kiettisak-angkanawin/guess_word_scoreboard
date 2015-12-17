@@ -1,50 +1,74 @@
-<div class="container"
+<nav class="navbar nav-fixed-top">
+  <div class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li class="logo">
+        <a href="#">PLAYDAY 2015</a>
+      </li>
+      <li class="pull-right reset">
+        <a href="#" data-ng-click="reset()">
+          <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container scoreboard"
      hotkey="{up: randomGuessWord,
             left: addTeam1Point,
             right: addTeam2Point}"
-  >
-  <div class="row">
-    <div class="col-sm-4 text-center">
-      <div class="row">Team 1</div>
-      <div class="row">{{team1Point}}</div>
-    </div>
-    <div class="col-sm-4 text-center" data-ng-click="reset()">Play day#2015</div>
-    <div class="col-sm-4 text-center">
-      <div class="row">Team 2</div>
-      <div class="row">{{team2Point}}</div>
+>
+  <div class="row guess-word">
+    <div style="position: relative; height: 100%;">
+      <div class="text-center">{{guessWord}}</div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-xs-12 text-center">
-      <div>{{guessWord}}</div>
+  <div class="div-score-pane">
+    <div class="row team-pane">
+      <div class="col-sm-6 left">
+        <div class="left-team-pane text-center">
+          Team 1
+        </div>
+      </div>
+      <div class="col-sm-6 right">
+        <div class="right-team-pane text-center">
+          Team 2
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="row pull-down">
-    <div class="col-sm-4 text-center">
-      <button class="btn btn-success"
-              data-ng-click="addTeam1Point()"
-        >add point
-      </button>
-      <button class="btn btn-danger"
-              data-ng-click="decreaseTeam1Point()"
-        >-
-      </button>
-    </div>
-    <div class="col-sm-4 text-center">
-      <button class="btn btn-primary"
-              data-ng-click="randomGuessWord()"
-        >random
-      </button>
-    </div>
-    <div class="col-sm-4 text-center">
-      <button class="btn btn-success"
-              data-ng-click="addTeam2Point()"
-        >add point
-      </button>
-      <button class="btn btn-danger"
-              data-ng-click="decreaseTeam2Point()"
-        >-
-      </button>
+    <div class="row score-pane">
+      <div class="col-sm-6 left">
+        <div class="left-score-pane text-center">
+          {{team1Point}}
+        </div>
+      </div>
+      <div class="col-sm-6 right">
+        <div class="right-score-pane text-center">
+          {{team2Point}}
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+<nav class="navbar nav-fixed-bottom">
+  <div class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li class="pull-left">
+        <a href="#" data-ng-click="addTeam1Point()">+</a>
+      </li>
+      <li class="pull-left">
+        <a href="#" data-ng-click="decreaseTeam1Point()">-</a>
+      </li>
+      <li>
+        <a href="#" data-ng-click="randomGuessWord()">RANDOM</a>
+      </li>
+      <li class="pull-right">
+        <a href="#" data-ng-click="addTeam2Point()">+</a>
+      </li>
+      <li class="pull-right">
+        <a href="#" data-ng-click="decreaseTeam2Point()">-</a>
+      </li>
+    </ul>
+  </div>
+</nav>

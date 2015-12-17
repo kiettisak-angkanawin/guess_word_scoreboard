@@ -1,1 +1,127 @@
 @import 'styles/base';
+
+.navbar-nav {
+  width: 100%;
+  text-align: center;
+  > li {
+    float: none;
+    display: inline-block;
+  }
+}
+
+.logo {
+  font-size: 60px;
+  margin: 5px;
+}
+
+a, a:focus, a:hover {
+  text-decoration: none;
+  background-color: transparent !important;
+}
+
+.guess-word,
+.left-score-pane,
+.left-team-pane,
+.right-score-pane,
+.right-team-pane {
+  text-align: center;
+}
+
+.guess-word {
+  background-color: #C8C8C8;
+  font-size: 44px;
+  color: #000;
+
+  height: 30%;
+}
+
+.reset {
+  font-size: 30px;
+}
+
+.div-score-pane {
+  height: 70%;
+}
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.col-sm-6 {
+  position: relative;
+  height: 100%;
+
+  padding: 0;
+
+  &.left {
+    border-right: 2px solid #fff;
+  }
+
+  &.right {
+    border-left: 2px solid #fff;
+  }
+}
+
+.team-pane {
+  height: 25%;
+
+  font-size: 60px;
+
+  border-bottom: 2px solid #fff;
+}
+
+.score-pane {
+  height: 75%;
+
+  font-size: 150px;
+}
+
+.text-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  color: #fff;
+  background-color: #4E6740;
+}
+
+html, body {
+  height: 100%;
+  padding: 0;
+}
+
+body {
+  padding-bottom:105px;
+}
+
+.scoreboard, .container, .content {
+  height: 100%;
+  min-height: 100%;
+}
+
+.navbar-collapse {
+  background-color: #A78C3F;
+}
+
+.navbar-nav > li > a {
+  color: #fff;
+}
+
+.navbar.nav-fixed-top {
+  margin: 0;
+}
+
+.navbar.nav-fixed-bottom {
+  font-size: 24px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
