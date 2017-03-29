@@ -1,5 +1,4 @@
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
 
 # cta-agent
 
@@ -12,9 +11,25 @@ Agent is a simple API allowing users to send results.
 You can send test status from you testscript to agent by requesting this api.
 + Request (application/json)
 
-        {
-            "status": "ok",
-        }
+    + Body
+    
+            {
+                "status": "ok"
+            }
+    
+    + Schema
+    
+            {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string",
+                        "enum": ["ok", "partial", "inconclusive", "failed"]
+                    }
+                }
+            }
+
 
 + Response 201 (application/json)
 
